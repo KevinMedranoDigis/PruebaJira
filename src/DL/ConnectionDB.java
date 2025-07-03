@@ -18,7 +18,7 @@ public class ConnectionDB {
             return context;
         }
         catch(SQLException ex){
-            
+            System.out.println("NO");
             return null;
         }
         
