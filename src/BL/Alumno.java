@@ -12,12 +12,16 @@ import java.sql.ResultSet;
 public class Alumno {
     public static ML.Result Add(ML.Alumno alumno){
     
-            
+            //prueba commit
         ML.Result result = new ML.Result();
         
         try(Connection context = DL.ConnectionDB.GetConnection();
                 PreparedStatement preparedStatement = context.prepareStatement("INSERT INTO Alumno VALUES(?,?,?)"))
         {
+            
+            
+            
+            
            preparedStatement.setString(1, alumno.getNombre());
            preparedStatement.setString(2, alumno.getApellidoPaterno());
            preparedStatement.setString(3, alumno.getApellidoMaterno());
